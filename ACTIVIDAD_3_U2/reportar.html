@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar rescate - Sistema de Rescate Animal</title>
+</head>
+<body>
+    <header>
+        <h1>Reportar rescate de animal</h1>
+        <p>Complete el formulario para informar sobre un animal que necesita ayuda.</p>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reportar.html">Reportar rescate</a>
+        <a href="rescates.html">Ver rescates</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Formulario de reporte de rescate</h2>
+            <form action="#" method="get">
+                <fieldset>
+                     <legend>Datos del ciudadano</legend>
+                     <p>
+                         <label for="nombre">Nombre completo:</label>
+                         <input type="text" id="nombre" name="nombre" required>
+                     </p>
+                     <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                     </p>
+                     <p>
+                        <label for="telefono">Número de teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono"
+                        pattern="[0-9]{10}" maxlength="10" required>
+                     </p>
+                </fieldset>    
+                <fieldset>
+                    <legend>Datos del animal que necesita rescate</legend>
+                    <p>
+                        <label for="identificacion">Nombre provisional o identificación del caso:</label>
+                        <input type="text" id="identificacion" name="identificacion" required>
+                    </p>
+                    <p>
+                        <label for="tipo_animal">Tipo de animal:</label>
+                        <select id="tipo_animal" name="tipo_animal" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="fauna_silvestre">Fauna silvestre</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="ubicacion">Ubicación del animal:</label>
+                        <input type="text" id="ubicacion" name="ubicacion"
+                        placeholder="Ej. Calle Bolívar y 10 de Agosto, Portoviejo"
+                        required>
+                    </p>
+                    <p>
+                        <label for="detalles">Detalles de la situación:</label>
+                    </p>
+                    <p>
+                        <textarea id="detalles" name="detalles" rows="5" cols="50"
+                        placeholder="Describa el estado del animal y la situación en la que se encuentra."
+                        required></textarea>
+                    </p>
+                    <p>Nivel de urgencia médica:</p>
+                    <p>
+                        <input type="radio" id="alta" name="urgencia" value="alta" required>
+                        <label for="alta">Alta</label>
+                        <input type="radio" id="media" name="urgencia" value="media">
+                        <label for="media">Media</label>
+                        <input type="radio" id="baja" name="urgencia" value="baja">
+                        <label for="baja">Baja</label>
+                    </p>
+                </fieldset>
+                <p>
+                    <button type="submit">Enviar reporte</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Proyecto académico - Desarrollo de Sistemas Informáticos</p>
+        <p>Universidad Técnica de Manabí - 2026</p>
+    </footer>
+</body>
+</html>
